@@ -1,74 +1,31 @@
-# angular-2-local-storage
+# RtmsAdmin
 
-LocalStorageService for Angular 2 with mostly the same API (and most of the code) from [angular-local-storage](https://github.com/grevory/angular-local-storage).
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.30.
 
-AoT compatible.
+## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Differences:
+## Code scaffolding
 
-* No events broadcast on $rootScope - LocalStorageService exposes observables for `errors$`, `removeItems$`, `setItems$` and `warning$` if you really need something to happen when something happens.
-* The `bind` function doesn't work anymore (there is a stub so this can still be a drop-in, but it'll do nothing).
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-## Install:
+## Build
 
-`npm install angular-2-local-storage`
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Usage:
+## Running unit tests
 
-### With angular-cli or vanilla WebPack:
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-With the latest angular-cli (WebPack), no config is required.
+## Running end-to-end tests
 
-For older versions (SystemJS based) see the comments here for configuration:
-[Issue #20](https://github.com/phenomnomnominal/angular-2-local-storage/issues/20)
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
 
-### With TypeScript
+## Deploying to GitHub Pages
 
-Nothing to configure, the typings are included in the package.
+Run `ng github-pages:deploy` to deploy to GitHub Pages.
 
-### In your app:
+## Further help
 
-First you need to configure the service:
-
-```typescript
-import { LocalStorageModule } from 'angular-2-local-storage';
-
-@NgModule({
-    imports: [
-        LocalStorageModule.withConfig({
-            prefix: 'my-app',
-            storageType: 'localStorage'
-        })
-    ],
-    declarations: [
-        ..
-    ],
-    providers: [
-        ..
-    ],
-    bootstrap: [AppComponent]
-})
-export class AppModule {}
-```
-
-Then you can use it in a component:
-
-```typescript
-import { LocalStorageService } from 'angular-2-local-storage';
-
-@Component({
-    // ...
-})
-export class SomeComponent {
-    constructor (
-        private localStorageService: LocalStorageService
-    ) {
-        // YAY!
-    }
-}
-
-```
-
-### Configuration options:
-
-`import { ILocalStorageServiceConfig } from 'angular-2-local-storage';` for type information about the configuration object.
+To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -1,39 +1,46 @@
 {
-  "name": "angular-2-local-storage",
-  "version": "1.0.1",
-  "description": "LocalStorageService for Angular 2 with mostly the same API (and most of the code) from angular-local-storage",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "author": "Craig Spence <craigspence0@gmail.com>",
-  "scripts": {
-    "prebuild": "rimraf ./dist ./compiled && mkdir dist",
-    "build": "ngc -p ./tsconfig.json && tsc -p ./tsconfig.json"
-  },
-  "contributors": [
-    {
-      "name": "Elwyn Benson",
-      "email": "elwyn@L1.co.nz"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/phenomnomnominal/angular-2-local-storage.git"
-  },
-  "bugs": {
-    "url": "https://github.com/phenomnomnominal/angular-2-local-storage/issues",
-    "email": "craigspence0@gmail.com"
-  },
+  "name": "rtms-admin",
+  "version": "0.0.0",
   "license": "MIT",
+  "angular-cli": {},
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update --standalone false --gecko false",
+    "e2e": "protractor"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^2.3.1",
+    "@angular/compiler": "^2.3.1",
+    "@angular/core": "^2.3.1",
+    "@angular/forms": "^2.3.1",
+    "@angular/http": "^2.3.1",
+    "@angular/platform-browser": "^2.3.1",
+    "@angular/platform-browser-dynamic": "^2.3.1",
+    "@angular/router": "^3.3.1",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.0.1",
+    "ts-helpers": "^1.1.1",
+    "zone.js": "^0.7.2"
+  },
   "devDependencies": {
-    "@angular/common": "2.4.5",
-    "@angular/compiler": "^2.4.5",
-    "@angular/compiler-cli": "^2.4.5",
-    "@angular/core": "^2.4.5",
-    "@angular/platform-browser": "2.4.5",
-    "@angular/platform-server": "^2.4.5",
-    "rimraf": "2.5.4",
-    "rxjs": "^5.0.3",
-    "typescript": "2.0.10",
-    "zone.js": "0.7.6"
+    "@angular/cli": "1.0.0-beta.30",
+    "@angular/compiler-cli": "^2.3.1",
+    "@types/jasmine": "2.5.41",
+    "@types/node": "^7.0.5",
+    "codelyzer": "~2.0.0-beta.1",
+    "jasmine-core": "2.5.2",
+    "jasmine-spec-reporter": "3.2.0",
+    "karma": "1.4.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-remap-istanbul": "^0.6.0",
+    "protractor": "~5.1.1",
+    "ts-node": "2.0.0",
+    "tslint": "^4.3.0",
+    "typescript": "~2.1.5"
   }
 }
